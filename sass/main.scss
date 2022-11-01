@@ -1,0 +1,754 @@
+/*rest*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// hojas parciales
+@import "utilities/variables";
+@import "utilities/mixin";
+
+/*estilos del header*/
+.header-home{
+    @include fuente;
+    background-color: $color-secundario;
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        "h1 ul";
+    h1{
+        grid-area: h1;
+        font-size: $tamaño-marca;
+        display: flex;
+    }
+    ul{
+        grid-area: ul;
+        font-size: 1rem;
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-evenly;
+    }
+    li{
+        list-style: none;
+    }
+    li:hover{
+        background-color: #E1CEB5 ;
+        transform:scale(0.9);
+        box-shadow: 1px 1px 3px black;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    a:hover{
+        color: black !important;
+    }
+    .navbar-brand{
+        font-size: $tamaño-marca;
+        margin-right: 40%;
+        }
+    
+} 
+.header{
+    @include fuente;
+    outline: 2px solid black;
+    background-color: $color-secundario;
+    display: flex;
+    justify-content: space-around;
+    h1{
+        font-size: $tamaño-marca;
+        a{
+            list-style: none;
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .indumentarias{
+        display: flex;
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            list-style: none;
+            gap: 5px;
+            li{
+                margin-top: 30px;
+                a{
+                    display: flex;
+                    text-decoration: none;
+                    color: black;
+                }
+                a:hover{
+                    color: black !important;
+                }
+            }
+            li:hover{
+                background-color: #E1CEB5 ;
+                transform:scale(0.9);
+                box-shadow: 1px 1px 3px black;
+                }
+        }
+    }
+}
+/*estilos carrusel*/
+.slide{
+    margin-top:10px;
+    img{
+        height: 65vh;
+    }
+}
+/*estilos del body*/
+.body{
+    background-color: $color-principal;
+}
+.destacado{
+    h2{
+        @include fuente;
+        font-size: 1.5rem;
+        text-align: left;
+        }
+}
+.bienvendos{
+    @include fuente;
+    
+}
+/*estilos del main*/
+.main-home{
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 8px 12px black;
+}
+main{
+    margin-top: 20px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns:repeat(3, 1.5fr );
+    grid-template-rows: repeat(3, 1fr );
+    justify-items: center;
+    align-items: center;
+    grid-template-areas:
+    "one two three"
+    "four five six"
+    "seven eight nine";
+    .card-1{
+        grid-area: one;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-1:hover{
+        transform: scale(1.1);
+    }
+    
+    .card-2{
+        grid-area: two;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-2:hover{
+        transform: scale(1.1);
+    }
+    
+    .card-3{
+        grid-area: three;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-3:hover{
+        transform: scale(1.1);
+    }
+    .card-4{
+        grid-area: four;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-4:hover{
+        transform: scale(1.1);
+    }
+    .card-5{
+        grid-area: five;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-5:hover{
+        transform: scale(1.1);
+    }
+    .card-6{
+        grid-area: six;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-6:hover{
+        transform: scale(1.1);
+    }
+    .card-7{
+        grid-area: seven;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-7:hover{
+        transform: scale(1.1);
+    }
+    .card-8{
+        grid-area: eight;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-8:hover{
+        transform: scale(1.1);
+    }
+    .card-9{
+        grid-area: nine;
+        margin-bottom: 10px;
+        width: 15rem;
+        height: 27rem;
+        background-color: $color-secundario;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        @include fuente;
+        .card-img-top{
+            height: $img;
+        }
+        .card-text{
+            font-weight: bold;
+        }
+        .card-cuotas{
+            @include cuotas;
+        }
+    }
+    .card-9:hover{
+        transform: scale(1.1);
+    }
+}
+.main-sb{
+    @include fuente;
+    background-color: $color-secundario;
+    width: 100%;
+    height: 500px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+    "sb sb"
+    "descripcion envios"
+    "mapa mapa";
+    gap: 15px;
+    .sb{
+        grid-area: sb;
+        display: flex;
+        justify-items: start;
+        border-bottom: black solid;
+    }
+    .descripcion{
+        grid-area: descripcion;
+        background-color: $color-principal;
+        border-radius: 10px;
+        width: 307px;
+        p{
+            text-align: center;
+        }
+    }
+    .envios{
+        grid-area: envios;
+        background-color: $color-principal;
+        border-radius: 10px;
+        p{
+            text-align: center;
+        }
+    }
+    .mapa{
+        grid-area: mapa;
+        width: 100%;
+
+    }
+    .container-boton{
+        position: fixed;
+        right: 25px;
+        bottom: 25px;
+        border-radius: 20px;
+        animation: efecto 1.2s infinite;
+    }
+    .container-boton:hover{
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+    .boton{
+        width: 50px;
+        transition: ease 1s;
+        cursor: pointer;
+    }
+    @keyframes efecto{
+        0%{
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+        }
+        100%{
+            box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+        }
+    }
+}
+
+/*estilos del footer*/
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    @include fuente;
+    background-color: $color-secundario;
+    h3{
+        @include fuente;
+        font-size: 1.5rem;
+    }
+    .logo{
+        cursor: pointer;
+        margin-top: 10px;
+        height: 20px;
+    }
+    .derechos{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width:720px) {
+    .header-home{
+        display: flex;
+        flex-direction: column;
+        ul{
+            margin-top: 3px;
+        }
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-size: 1.6rem;
+        }
+        .indumentarias{
+            font-size: 1.0rem;
+        }
+        }
+    main{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(3, 160px);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "one two three"
+        "four five six"
+        "seven eight nine";
+        .card-1{
+            grid-area: one;
+            width: 10rem;
+            height: 27rem;}
+        .card-2{
+            grid-area: two;
+            width: 10rem;
+            height: 27rem;}
+        .card-3{
+            grid-area: three;
+            width: 10rem;
+            height: 27rem;
+            .card-img.top{
+                width: 130px;
+            }
+        }
+        .card-4{
+            grid-area: four;
+            width: 10rem;
+            height: 27rem;
+        }
+        .card-5{
+            grid-area: five;
+            width: 10rem;
+            height: 27rem;
+        }
+        .card-6{
+            grid-area: six;
+            width: 10rem;
+            height: 27rem;
+        }
+        .card-7{
+            grid-area: seven;
+            width: 10rem;
+            height: 27rem;
+        }
+        .card-8{
+            grid-area: eight;
+            width: 10rem;
+            height: 27rem;
+        }
+        .card-9{
+            grid-area: nine;
+            width: 10rem;
+            height: 27rem;
+        }
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 200px;
+        @include fuente;
+        background-color: $color-secundario;
+        h3{
+        @include fuente;
+        font-size:footer-mq;
+        }
+        .logo{
+        cursor: pointer;
+        margin-top: 10px;
+        height: 20px;
+        }
+        .derechos{
+        font-size: footer-mq;
+        margin-top: 30px;
+        }
+    }
+
+}
+@media (max-width:415px) {
+    .body{
+        background-color: $color-principal;
+    }
+    .header{
+        h1{
+            font-size: 1.2rem;
+        }
+        .indumentarias{
+            font-size: 0.8rem;
+        }
+    }
+    main{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas:
+        "one two"
+        "three four"
+        "five six"
+        "seven eight"
+        "nine nine";
+        .card-1{
+            grid-area: one;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .card-2{
+            grid-area: two;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .card-3{
+            grid-area: three;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .card-4{
+            grid-area: four;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .card-5{
+            grid-area: five;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .card-6{
+            grid-area: six;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .card-7{
+            grid-area: seven;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .card-8{
+            grid-area: eight;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+        .card-9{
+            grid-area: nine;
+            justify-content: center;
+            align-items: center;
+            width: 10rem;
+            height: 300px;
+            .card-img-top{
+                display: flex;
+                align-items: center;
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+    .main-sb{
+        @include fuente;
+    background-color: $color-secundario;
+    width: 100%;
+    height: 500px;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:
+    "sb sb"
+    "descripcion envios"
+    "mapa mapa";
+    gap: 15px;
+        .sb{
+            grid-area: sb;
+            display: flex;
+            justify-items: start;
+            border-bottom: black solid;
+        }
+        .descripcion{
+            grid-area: descripcion;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $color-principal;
+            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            p{
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+        .envios{
+            grid-area: envios;
+            display: flex;
+            background-color: $color-principal;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            width: 150px;
+            height: 150px;
+            p{
+                text-align: center;
+                font-size: 15px;
+            }
+        }
+        .mapa{
+            grid-area: mapa;
+            width: 100%;
+
+        }
+        .container-boton{
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            border-radius: 20px;
+            animation: efecto 1.2s infinite;
+        }
+        .container-boton:hover{
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+        .boton{
+            width: 50px;
+            transition: ease 1s;
+            cursor: pointer;
+        }
+        @keyframes efecto{
+            0%{
+                box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+            }
+            100%{
+                box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}
